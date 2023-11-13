@@ -1,0 +1,9 @@
+@import '@/assets/mixins/_colorMixins.scss';
+
+.scrollbar {
+  &__indicator {
+    width: 0%;
+    height: 4px;
+    background: $color-blue-dark;
+  }
+}

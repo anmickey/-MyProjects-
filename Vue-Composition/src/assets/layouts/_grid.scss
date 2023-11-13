@@ -1,0 +1,24 @@
+@import '@/assets//mixins/_breakpoints.scss';
+
+.h {
+  &_lag {
+    @include breakpoint(three) {
+      display: none;
+    }
+  }
+  &_med {
+    @include breakpoint(two) {
+      display: none;
+    }
+  }
+  &_smal-med {
+    @include breakpoint(onetwo) {
+      display: none;
+    }
+  }
+  &_smal {
+    @include breakpoint(one) {
+      display: none;
+    }
+  }
+}

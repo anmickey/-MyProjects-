@@ -1,0 +1,16 @@
+@mixin svg-block($w, $h, $c) {
+  width: $w;
+  height: $h;
+  @include svg(100%, 100%, $c) {
+    @content;
+  }
+}
+
+@mixin svg($w, $h, $c) {
+  svg {
+    width: $w;
+    height: $h;
+    fill: $c;
+    @content;
+  }
+}

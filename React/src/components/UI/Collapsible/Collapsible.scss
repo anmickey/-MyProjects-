@@ -1,0 +1,108 @@
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+.collapsible {
+  position: relative;
+  color: $gray;
+  cursor: pointer;
+  height: 100%;
+  &__body {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.266);
+    background: $collapsible;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: -10px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+    visibility: hidden;
+    max-width: 0;
+    max-height: 0;
+    width: auto;
+    height: auto;
+  }
+  &.show .collapsible__body {
+    opacity: 1;
+    visibility: visible;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  &__title {
+    transition: all 1s linear 0s;
+  }
+
+  &.another {
+    width: 100%;
+    li {
+      justify-content: center !important;
+    }
+    .collapsible__icon {
+      text-align: center;
+      visibility: hidden;
+      display: none;
+    }
+    .collapsible__body {
+      min-width: 100%;
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    svg {
+      fill: $gray;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover .collapsible__title p {
+    color: $gray-old !important;
+  }
+
+  ul {
+    padding: 10px;
+  }
+
+  li {
+    border-bottom: 1px solid $graylight;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    p {
+      color: $gray;
+    }
+    svg {
+      fill: $gray;
+    }
+  }
+
+  li:first-child {
+    padding-top: 0px;
+  }
+  li:last-child {
+    padding-bottom: 0px;
+  }
+
+  &.classic li.check,
+  li:hover {
+    svg {
+      fill: $gray-old;
+    }
+
+    p {
+      color: $gray-old;
+    }
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,7 @@
+<!-- <svg width="56" height="55" viewBox="0 0 56 55" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.3578 2.50827C24.9047 4.36375 23.8547 6.31678 21.9953 6.86915C13.3219 9.45675 7 17.5176 7 26.943C7 38.659 16.3078 47.9858 28 47.9858C39.5938 47.9858 49 38.659 49 26.943C49 17.5176 42.6781 9.45675 34.0047 6.86915C32.1453 6.31678 31.0953 4.36375 31.6422 2.50827C32.2 0.651685 34.1469 -0.405712 35.9953 0.146441C47.5672 3.59547 56 14.2297 56 26.943C56 42.5388 43.4656 55 28 55C12.5344 55 0 42.5388 0 26.943C0 14.2297 8.43828 3.59547 20.0047 0.146441C21.8531 -0.405712 23.8 0.651685 24.3578 2.50827Z" />
+</svg> -->
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><linearGradient id="a5"><stop offset="0" stop-opacity="0"></stop><stop offset="1" ></stop></linearGradient><circle fill="none" stroke="url(#a5)" stroke-width="18" stroke-linecap="round" stroke-dasharray="0 44 0 44 0 44 0 44 0 360" cx="100" cy="100" r="70" transform-origin="center"><animateTransform type="rotate" attributeName="transform" calcMode="discrete" dur="1" values="360;324;288;252;216;180;144;108;72;36" repeatCount="indefinite"></animateTransform></circle></svg>
+

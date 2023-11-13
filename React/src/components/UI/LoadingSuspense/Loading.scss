@@ -1,0 +1,18 @@
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  .loading {
+    background-image: url('../../../media/loading/loading.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 15px 15px;
+  }
+}

@@ -1,0 +1,68 @@
+.singUp__body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.singUp__body .country {
+  grid-area: b;
+  align-self: start;
+  padding-bottom: 30px;
+}
+
+.singUp__body .inputFiled {
+  grid-area: c;
+  align-self: start;
+}
+
+.singUp__body .inputFiled:last-child {
+  grid-area: d;
+  align-self: start;
+  padding: 0;
+}
+
+.singUp__body .singUp__name {
+  grid-area: a;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 28px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'a b c';
+  align-self: start;
+}
+
+.singUp__body .singUp__name .inputFiled {
+  grid-column: 1/2;
+  grid-area: a;
+}
+
+.singUp__body .singUp__name .inputFiled:last-child {
+  grid-column: 3/4;
+  grid-area: c;
+}
+
+.singUp__progress {
+  grid-row: 3/4;
+  align-self: end;
+  padding-bottom: 15px;
+  grid-area: c;
+}
+
+.singUp__btn {
+  grid-row: 4/5;
+  grid-area: d;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.singUp.three .singUp__progress {
+  grid-row: 2/3 !important;
+  grid-area: b !important;
+  padding-bottom: 0;
+}
+
+.singUp.three .singUp__btn {
+  display: none;
+}

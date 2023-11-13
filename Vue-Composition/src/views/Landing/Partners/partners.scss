@@ -1,0 +1,107 @@
+@import '@/assets/mixins/_colorMixins.scss';
+@import '@/assets/mixins/_breakpoints.scss';
+
+.partner {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  padding: 2rem 0;
+  background: $bg-main;
+
+  &__container {
+    height: 100%;
+  }
+  &__wrap {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__body {
+    display: grid;
+    grid-template: auto / 40% 10% 50%;
+    width: 100%;
+  }
+
+  &__title {
+    text-align: left;
+
+    h2 {
+      top: 5rem;
+      position: sticky;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+  }
+
+  .InfoBlock {
+    grid-column: 3/4;
+    text-align: left;
+  }
+
+  .parallaxinfo {
+    width: calc(50% - 40px);
+  }
+
+  &__title,
+  .parentrinfo .InfoBlock__block {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  &.show .InfoBlock__block,
+  &.show &__title {
+    animation: titleshow 0.3s linear 0.3s both;
+  }
+
+  @keyframes titleshow {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    & {
+      min-height: 100%;
+    }
+    &__body {
+      padding: 0 !important;
+    }
+    &__title {
+      text-align: left;
+    }
+  }
+  @include breakpoint(three) {
+    &__body {
+      margin: 0 auto;
+    }
+  }
+  @include breakpoint(onetwo) {
+    & {
+      padding: 5rem 0;
+    }
+    &__wrap {
+      height: 100%;
+      min-height: auto;
+    }
+    &__title {
+      margin: 0px 0 20px;
+      h2 {
+        position: static;
+      }
+    }
+    &__body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

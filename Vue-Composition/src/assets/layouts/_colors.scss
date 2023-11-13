@@ -1,0 +1,52 @@
+@import '@/assets/mixins/_colorMixins.scss';
+
+.c {
+  &__g {
+    &_d {
+      color: $color-gray-dark;
+    }
+    &_dl {
+      color: $color-gray-darklight;
+    }
+    &_l {
+      color: $color-gray-light1;
+    }
+    &_l-4 {
+      color: $color-gray-light-4;
+    }
+
+    &_dl-l {
+      color: $color-gray-darklight;
+      &:hover {
+        color: $color-gray-light1 !important;
+      }
+    }
+  }
+  &__w {
+    color: #fff;
+    &_d {
+      color: #e7e7e7;
+    }
+    &_l-d {
+      color: #fff;
+      &:hover {
+        color: $color-white-darker !important;
+      }
+    }
+  }
+
+  &__b {
+    &_d {
+      color: $color-blue-dark;
+    }
+    &_l {
+      color: $color-blue-light;
+    }
+    &_d-l {
+      color: $color-blue-light;
+      &:hover {
+        color: $color-blue-dark !important;
+      }
+    }
+  }
+}

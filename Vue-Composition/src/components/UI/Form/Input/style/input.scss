@@ -1,0 +1,107 @@
+@import '@/assets/mixins/_colorMixins.scss';
+@import '@/assets/mixins/_breakpoints.scss';
+
+input,
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: $color-gray-light3 !important;
+}
+
+.input {
+  &__block {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    left: auto;
+    right: auto;
+    padding: 0 0.75rem;
+    border-radius: 0;
+    height: 3.5rem;
+    width: 100%;
+  }
+  input {
+    position: absolute;
+    background: $bg-blue-dark;
+    color: $color-gray-darklight;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid $color-gray-light3;
+    &:focus {
+      border-bottom: 1px solid $color-gray-darklight !important;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-size: 1.4rem;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    right: 0.9rem;
+    width: 2rem !important;
+    font-size: 1.8rem !important;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__text {
+    min-height: 18px;
+    height: 3.5rem;
+    display: block;
+    font-size: 12px;
+  }
+
+  &.add {
+    input {
+      border-bottom: 1px solid $color-gray-darklight !important;
+    }
+  }
+
+  &.invalid {
+    input {
+      border-bottom: 1px solid #f44336 !important;
+    }
+
+    .input__text p {
+      color: #f44336 !important;
+    }
+  }
+
+  @include breakpoint(onetwo) {
+    &__icon {
+      right: 0rem;
+    }
+
+    &__text {
+      display: none;
+      min-height: 18px;
+      height: 3.5rem;
+
+      &.show {
+        display: block;
+      }
+    }
+    label {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      font-size: 1.2rem;
+    }
+  }
+}

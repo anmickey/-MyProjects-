@@ -1,0 +1,18 @@
+@import '@/assets/mixins/_colorMixins.scss';
+@import '@/assets/components/_fonts.scss';
+
+.logo {
+  &__text {
+    user-select: none;
+    line-height: 1;
+    font-size: 2rem;
+    text-align: left;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: $global-fonts-logo;
+    sup {
+      font-size: 1rem;
+    }
+  }
+}

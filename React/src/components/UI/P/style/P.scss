@@ -1,0 +1,87 @@
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: 18px;
+  font-weight: 500;
+  font-family: $font-family-two;
+  color: $gray;
+}
+
+p.l {
+  font-weight: 500;
+}
+
+p.m {
+  font-weight: 500;
+}
+
+p.b {
+  font-weight: 500;
+}
+@include breakpoint(five) {
+  p.l {
+    font-size: 1.1rem;
+  }
+
+  p.m {
+    font-size: 1.2rem;
+  }
+
+  p.b {
+    font-size: 1.6rem;
+  }
+}
+@include breakpoint(four) {
+  p.l {
+    font-size: 1.1rem;
+  }
+
+  p.m {
+    font-size: 1.2rem;
+  }
+
+  p.b {
+    font-size: 1.5rem;
+  }
+}
+@include breakpoint(three) {
+  p.l {
+    font-size: 1.2rem;
+  }
+
+  p.m {
+    font-size: 1.4rem;
+  }
+
+  p.b {
+    font-size: 1.5rem;
+  }
+}
+@include breakpoint(two) {
+  p.b {
+    font-size: 18px;
+  }
+  p.m {
+    font-size: 17px;
+    font-weight: 400;
+  }
+  p.l {
+    font-size: 14px;
+  }
+}
+
+@include breakpoint(one) {
+  p.b {
+    font-size: 18px;
+  }
+  p.m {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  p.l {
+    font-size: 14px;
+  }
+}

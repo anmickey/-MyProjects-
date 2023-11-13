@@ -1,0 +1,79 @@
+/* autoprefixer grid: autoplace */
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+.login {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(51, 51, 51);
+  height: 100%;
+  overflow-y: auto;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__container {
+  display: grid;
+  grid-template-columns: minmax(250px, 464px);
+  display: -ms-grid;
+  -ms-grid-columns: minmax(250px, 464px);
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  justify-items: center;
+}
+
+.login__body {
+  align-self: center;
+  padding: 30px;
+  display: grid;
+  grid-template: auto 1fr auto/ 1fr;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr;
+  -ms-grid-rows: auto 1fr auto;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: 50px 0;
+}
+
+.login__title {
+  grid-row: 1/2;
+  padding-bottom: 40px;
+  color: rgb(51, 51, 51);
+}
+
+.footinup {
+  grid-row: 3/4;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 55px;
+  &__btn {
+    margin-left: 5px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+}
+
+@include breakpoint(one) {
+  .login {
+    background: #fff;
+  }
+  .login__body {
+    padding: 10px;
+    grid-template: auto 1fr auto/ 100%;
+    width: 100%;
+    border-radius: 0px;
+  }
+  .footinup {
+    padding-top: 50px;
+
+    &__btn {
+      margin-left: 5px;
+    }
+  }
+}

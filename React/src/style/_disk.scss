@@ -1,0 +1,173 @@
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background: #edede6;
+  text-size-adjust: 100%;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: $font-family-two;
+}
+
+:focus,
+:action {
+  outline: none;
+}
+
+a:focus,
+a:action {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+input,
+input::placeholder,
+button,
+textarea {
+  font-family: $font-family-two;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input {
+  display: block;
+  border-radius: 0 !important;
+  width: 100%;
+}
+
+.logo {
+  user-select: none;
+}
+
+input {
+  width: 100%;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 280px) {
+  html {
+    font-size: calc(10px + 5 * (100vw - 280px) / 118);
+  }
+}
+
+@media screen and (min-width: 398px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: calc(9px + 5.25 * (100vw - 480px) / 273);
+  }
+}
+
+@media screen and (min-width: 753px) {
+  html {
+    font-size: 14.25px;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  html {
+    font-size: calc(9px + 4 * (100vw - 760px) / 352);
+  }
+}
+
+@media screen and (min-width: 1112px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  html {
+    font-size: calc(10.5px + 3 * (100vw - 1180px) / 360);
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (min-width: 1720px) {
+  html {
+    font-size: calc(12px + 1.5 * (100vw - 1720px) / 180);
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  html {
+    font-size: 13.5px;
+  }
+}

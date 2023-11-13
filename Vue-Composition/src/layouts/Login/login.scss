@@ -1,0 +1,144 @@
+@import '@/assets/mixins/_colorMixins.scss';
+@import '@/assets/mixins/_breakpoints.scss';
+@import '@/assets/components/_fonts.scss';
+
+.login {
+  width: 100%;
+  min-height: 100vh;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__header_container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__header {
+    border-radius: 0 0 10% 0;
+    padding: 3rem 0;
+    p {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    .row {
+      margin: 0 !important;
+    }
+  }
+
+  h3,
+  h2 {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  &__title {
+    width: 100%;
+    margin: 3.5rem 0 0;
+    height: 100%;
+    h2 {
+      font-family: $global-fonts-logo !important;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
+    .row {
+      margin: 0 !important;
+    }
+  }
+
+  &__body {
+    max-width: 500px;
+    width: 100%;
+    padding-bottom: 3rem;
+    &.up {
+      max-width: 900px;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__link {
+    font-weight: bold;
+  }
+  &__below {
+    max-width: 500px;
+    width: 100%;
+    padding-bottom: 30px;
+    text-align: center;
+    p {
+      line-height: 130%;
+    }
+    a {
+      position: relative;
+      height: 20px;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #fff;
+        height: 1px;
+      }
+    }
+  }
+
+  &__footertext {
+    text-align: center;
+  }
+  .btn-flat {
+    padding: 0 !important;
+  }
+
+  &__goback {
+    i {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+}
+@include breakpoint(one) {
+  .login {
+    &__header {
+      padding: 2.8rem 0;
+    }
+    &__subtitle {
+      padding: 2.8rem 0;
+      .row {
+        margin: 0 !important;
+      }
+    }
+    &__title {
+      width: 100%;
+      margin: 2.5rem 0 0;
+    }
+    &__body {
+      padding-bottom: 15px;
+    }
+    &__btn {
+      padding-bottom: 30px;
+    }
+    &__footer {
+      flex-direction: column-reverse;
+      align-items: flex-start !important;
+    }
+    &__footertext {
+      text-align: left;
+    }
+
+    &__below {
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

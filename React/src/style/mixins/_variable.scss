@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+$mw: 1400;
+$mw1: calc($mw + 12);
+$mw2: 1100;
+$mw3: calc(992 + 12);
+$mw4: 769;
+$mw5: 479;
+$mw6: 400;
+
+$graylight: #dbdbdb;
+$gray: #7c7c7c;
+$green1: #307041;
+$green2: #95ad9b;
+$green3: #c0d6c5;
+$gray-old: rgb(51, 51, 51);
+$gray-old-two: rgb(73, 73, 73);
+// $font-family: 'PT Sans', sans-serif;
+$font-family-two: 'Lato', sans-serif;
+$collapsible: #f7f7f3;
+
+@mixin svg($w, $h, $c) {
+  svg {
+    width: $w;
+    height: $h;
+    fill: $c;
+    @content;
+  }
+}
+
+@mixin block-svg($wb, $hb) {
+  width: $wb;
+  height: $hb;
+  @content;
+}
+
+@keyframes disc {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+%load {
+  background-image: url('../../media/loading/loading.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  img {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}

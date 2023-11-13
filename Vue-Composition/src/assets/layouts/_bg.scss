@@ -1,0 +1,43 @@
+@import '@/assets/mixins/_colorMixins.scss';
+
+.bg {
+  &__b {
+    &_d {
+      background: $bg-blue-dark;
+    }
+    &_d-l {
+      background-color: $bg-blue-light;
+      &:hover {
+        background: $bg-blue-dark;
+      }
+    }
+    &_l {
+      background: $bg-blue-light;
+    }
+    &_gr {
+      background: linear-gradient(to right, $bg-blue-dark 20%, $bg-blue-light) !important;
+      background-color: $bg-blue-dark;
+    }
+  }
+
+  &__g {
+    background-color: $bg-gray;
+
+    &_dl {
+      background-color: $color-gray-darklight;
+    }
+    &_l {
+      background-color: $bg-gray-light-4;
+    }
+  }
+
+  &__w {
+    background-color: #fff;
+    &_l-d {
+      background-color: #fff;
+      &:hover {
+        background-color: $color-white-darker !important;
+      }
+    }
+  }
+}

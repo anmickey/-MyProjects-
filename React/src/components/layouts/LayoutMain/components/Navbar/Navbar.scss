@@ -1,0 +1,265 @@
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+.header {
+  width: 100%;
+  margin-top: 20px;
+
+  p {
+    letter-spacing: 1px;
+  }
+  &__wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__row {
+    display: grid;
+    grid-template: 1fr/ 1fr auto auto;
+
+    display: -ms-grid;
+    -ms-grid-columns: 1fr auto auto;
+    -ms-grid-rows: 1fr;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.navbar {
+  -ms-grid-row-align: center;
+  grid-column: 2/3;
+  &__wrap {
+    border-right: 1px solid $gray;
+    margin-right: 25px;
+  }
+
+  &__block {
+    display: flex;
+
+    a {
+      text-decoration: none;
+    }
+
+    li {
+      padding-right: 25px;
+      p {
+        cursor: pointer;
+        display: inline-block;
+        color: $gray;
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          right: 0;
+          width: 0%;
+          height: 1.5px;
+          background: $gray;
+          transition: all 0.3s ease 0s;
+        }
+      }
+      p:hover {
+        color: $gray-old;
+        &:after {
+          right: auto;
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    li a.add {
+      p {
+        color: $gray-old;
+        &:after {
+          width: 100%;
+          background: $green1;
+        }
+      }
+    }
+
+    li:nth-child(3) {
+      p {
+        cursor: not-allowed !important;
+      }
+    }
+    li:nth-child(4) {
+      p {
+        cursor: not-allowed !important;
+      }
+    }
+  }
+}
+
+.logo {
+  -ms-grid-row-align: center;
+
+  grid-column: 1/2;
+  &__text {
+    font-family: $font-family-two;
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+  }
+  span {
+    display: block;
+    color: $gray-old;
+  }
+  span:nth-child(2) {
+    transform: rotate(90deg);
+    padding: 0 5px;
+  }
+}
+
+.accoutmenu {
+  -ms-grid-row-align: center;
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__user {
+    display: flex;
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+    align-items: center;
+  }
+  &__login {
+    padding-right: 10px;
+    p {
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &__icon {
+    width: 15px;
+    height: 15px;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $gray;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &__user:hover {
+    svg {
+      fill: $gray-old !important;
+    }
+    .accoutmenu__login {
+      p {
+        color: $gray-old;
+      }
+    }
+  }
+}
+
+.accoutmenu {
+  &__wrap.add {
+    .menublock {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__block {
+    height: 30px;
+  }
+}
+
+.langselect {
+  padding-right: 25px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      svg {
+        fill: $gray-old !important;
+      }
+      p {
+        color: $gray-old;
+      }
+    }
+  }
+
+  &__text {
+    padding-right: 10px;
+  }
+}
+
+@include breakpoint(three) {
+  .header {
+    &__row {
+      grid-template: 1fr 1em auto/ 1fr auto auto;
+    }
+  }
+
+  .navbar {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .accoutmenu {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+@include breakpoint(onethree) {
+  .navbar {
+    &__wrap {
+      border-right: none;
+      margin-right: 0;
+    }
+  }
+}
+
+@include breakpoint(onetwo) {
+  .header {
+    &__row {
+      grid-template: 1fr 1.5em auto 1.5em auto/ 1fr auto;
+    }
+  }
+
+  .navbar {
+    justify-self: start;
+    grid-column: 1/3;
+    grid-row: 5/6;
+    li {
+      padding-right: 20px;
+      text-align: center;
+    }
+  }
+  .accoutmenu {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .logo {
+    justify-self: center;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    &__text {
+      font-size: 35px;
+    }
+  }
+}
+
+@include breakpoint(one) {
+  .navbar {
+    li:last-child {
+      padding-right: 0;
+    }
+  }
+  .langselect {
+    padding-right: 20px;
+  }
+}

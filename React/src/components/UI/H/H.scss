@@ -1,0 +1,39 @@
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-family: $font-family-two;
+  color: $gray-old;
+}
+
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 120%;
+}
+
+h3 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+@include breakpoint(three) {
+}
+@include breakpoint(onethree) {
+  h2 {
+    font-size: 20px;
+  }
+}

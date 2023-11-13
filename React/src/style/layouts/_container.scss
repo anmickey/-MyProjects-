@@ -1,0 +1,33 @@
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include breakpoint(fourfive) {
+  .container {
+    max-width: 1400px;
+  }
+}
+@include breakpoint(four) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+@include breakpoint(three) {
+  .container {
+    max-width: 750px;
+  }
+}
+@include breakpoint(onethree) {
+  .container {
+    padding: 0px 10px;
+  }
+}
+@include breakpoint(onetwo) {
+  .container {
+    max-width: none;
+  }
+}

@@ -1,0 +1,102 @@
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+.remember {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0 30px;
+}
+
+.remember__blockOne {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.remember__text p {
+  font-family: $font-family-two;
+  color: #cac9ce;
+  padding-left: 10px;
+  user-select: none;
+  transition: color 0.2s ease 0s;
+}
+
+.remember__checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cac9ce;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+}
+
+.remember__blockOne:hover .remember__text p {
+  color: #95ad9b;
+}
+
+.remember__blockOne:hover .remember__checkbox {
+  background: #95ad9b;
+}
+
+.remember.active .remember__text p {
+  color: #307041 !important;
+}
+
+.remember.active .remember__checkbox {
+  background: #307041;
+}
+
+.remember__ok {
+  position: relative;
+  width: 15px;
+  height: 15px;
+}
+
+.remember__ok:after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  background: #fff;
+  transition: all 0.2s ease 0s;
+  margin: auto;
+  transform: rotate(-45deg);
+  transform-origin: 100% 0%;
+  border-radius: 0.5rem;
+}
+
+.remember__ok:before {
+  content: '';
+  position: absolute;
+  bottom: 45%;
+  left: 10%;
+  transform: rotate(45deg);
+  transform-origin: 0% 45%;
+  border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.remember.active .remember__ok:after {
+  width: 10px;
+  height: 2.5px;
+}
+.remember.active .remember__ok:before {
+  left: 10%;
+  width: 7px;
+  height: 2.5px;
+}
+
+@include breakpoint(onetwo) {
+  .remember__checkbox {
+    width: 18px;
+    height: 18px;
+  }
+}

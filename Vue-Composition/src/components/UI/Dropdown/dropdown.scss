@@ -1,0 +1,10 @@
+@import '@/assets/mixins/_colorMixins.scss';
+@import '@/assets//mixins/_breakpoints.scss';
+
+.dropdown {
+  &__title {
+    i {
+      margin-left: 10px;
+    }
+  }
+}

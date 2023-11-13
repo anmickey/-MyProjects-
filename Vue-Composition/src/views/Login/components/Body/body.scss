@@ -1,0 +1,42 @@
+@import '@/assets/mixins/_colorMixins.scss';
+@import '@/assets//mixins/_breakpoints.scss';
+
+.login__link {
+  transition: color 0.2s linear 0s;
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-self: end;
+    padding-top: 40px;
+    justify-self: end;
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
+  i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+}
+
+.form-col {
+  display: grid;
+  column-gap: 20px;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@include breakpoint(onetwo) {
+  .form-col {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .login__body form {
+    display: grid;
+    row-gap: 20px;
+    padding-bottom: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+/* autoprefixer grid: autoplace */
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+.home {
+  padding: 100px 0;
+  width: 100%;
+  height: 100%;
+}
+
+@include breakpoint(onetwo) {
+  .home {
+    padding: 50px 0;
+  }
+}

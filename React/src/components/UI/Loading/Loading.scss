@@ -1,0 +1,27 @@
+.loading {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.loading__elem {
+  background-image: url('../../../media/loading/loading.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.loading.btnload {
+  width: 100%;
+  height: 100%;
+
+  .loading__elem {
+    background-size: 15px 15px;
+    width: 15px;
+    height: 15px;
+  }
+}

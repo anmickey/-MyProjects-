@@ -1,0 +1,90 @@
+$bp1Start: 1px;
+$bp1End: 479px;
+
+$bp2Start: 480px;
+$bp2End: 759px;
+
+$bp3Start: 760px;
+$bp3End: 1179px;
+
+$bp4Start: 1180px;
+$bp4End: 1719px;
+
+$bp5Start: 1720px;
+$bp5End: 9999px;
+
+@mixin breakpoint($point) {
+  @if $point == five {
+    @media (min-width: $bp5Start) and (max-width: $bp5End) {
+      @content;
+    }
+  } @else if $point == four {
+    @media (min-width: $bp4Start) and (max-width: $bp4End) {
+      @content;
+    }
+  } @else if $point == three {
+    @media (min-width: $bp3Start) and (max-width: $bp3End) {
+      @content;
+    }
+  } @else if $point == two {
+    @media (min-width: $bp2Start) and (max-width: $bp2End) {
+      @content;
+    }
+  } @else if $point == one {
+    @media (min-width: $bp1Start) and (max-width: $bp1End) {
+      @content;
+    }
+  } @else if $point == fourfive {
+    @media (min-width: $bp4Start) and (max-width: $bp5End) {
+      @content;
+    }
+  } @else if $point == threefive {
+    @media (min-width: $bp3Start) and (max-width: $bp5End) {
+      @content;
+    }
+  } @else if $point == threefour {
+    @media (min-width: $bp3Start) and (max-width: $bp4End) {
+      @content;
+    }
+  } @else if $point == twofive {
+    @media (min-width: $bp2Start) and (max-width: $bp5End) {
+      @content;
+    }
+  } @else if $point == twofour {
+    @media (min-width: $bp2Start) and (max-width: $bp4End) {
+      @content;
+    }
+  } @else if $point == onetwo {
+    @media (min-width: $bp1Start) and (max-width: $bp2End) {
+      @content;
+    }
+  } @else if $point == onethree {
+    @media (min-width: $bp1Start) and (max-width: $bp3End) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (min-width: $bp3Start) and (max-width: $bp5End) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (min-width: $bp1Start) and (max-width: $bp2End) {
+      @content;
+    }
+  } @else if $point == oneHeight {
+    @media screen and (orientation: landscape) and (max-height: $bp1End) {
+      @content;
+    }
+  } @else if $point == twoHeight {
+    @media screen and (orientation: landscape) and (min-height: $bp2Start) and (max-height: $bp2End) {
+      @content;
+    }
+  } @else if $point == height720Landscape {
+    @media screen and (orientation: landscape) and (max-height: 720px) {
+      @content;
+    }
+  } @else if $point == height940Landscape {
+    @media screen and (orientation: landscape) and (min-height: 721px) and (max-height: 940px) {
+      @content;
+    }
+  }
+}

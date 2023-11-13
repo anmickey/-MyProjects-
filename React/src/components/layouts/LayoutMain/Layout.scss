@@ -1,0 +1,63 @@
+@import 'src/style/mixins/_variable.scss';
+@import 'src/style/mixins/_breakpoints.scss';
+
+.layoutWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  scrollbar-color: #717171;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #717171;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.layoutWrapper__body {
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.footer__saveblock {
+  height: 80px;
+}
+
+.layoutWrapper__footer {
+  border-top: 1px solid #dbdbdb;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0;
+}
+
+@include breakpoint(two) {
+  .footer__saveblock {
+    height: 140px;
+  }
+}
+
+@include breakpoint(one) {
+  .footer__saveblock {
+    height: 169px;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .layoutWrapper {
+      min-height: 100vh !important;
+      justify-content: space-between;
+    }
+  }
+}

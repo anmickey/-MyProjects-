@@ -1,0 +1,14 @@
+.footer {
+  padding: 20px 0 !important;
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 !important;
+    justify-content: end;
+    p {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# dependencies
+**/build
+**/another
+**/node_modules
+**/vue-vite
+/myProjects
